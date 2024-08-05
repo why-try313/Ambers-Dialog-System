@@ -224,7 +224,7 @@ func _on_file_dialog_load_file_async():
 		if type and node_stack.has(type):
 			var new_node = get_new_node(type, node_name)
 			# reassign node"s data
-			for key in dialog[ node_name ].res.node_data:
+			for key in dialog[ node_name ]:
 				new_node.node_data[ key ] = dialog[ node_name ][ key ]
 			# pass to object for next loop quick reference
 			dialog[ node_name ].res = new_node
